@@ -4,7 +4,7 @@
 #
 Name     : azure-datalake-store
 Version  : 0.0.48
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/15/00/8bfe15183eadaecd8d7a53db58b1a4a085ed509630757423ece1649716bd/azure-datalake-store-0.0.48.tar.gz
 Source0  : https://files.pythonhosted.org/packages/15/00/8bfe15183eadaecd8d7a53db58b1a4a085ed509630757423ece1649716bd/azure-datalake-store-0.0.48.tar.gz
 Summary  : Azure Data Lake Store Filesystem Client Library for Python
@@ -58,7 +58,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1588635541
+export SOURCE_DATE_EPOCH=1588888130
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -77,6 +77,9 @@ python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
+## Remove excluded files
+rm -f %{buildroot}/usr/lib/python3.8/site-packages/samples/__init__.py
+rm -f %{buildroot}/usr/lib/python3.8/site-packages/samples/__pycache__/__init__.cpython-38.pyc
 
 %files
 %defattr(-,root,root,-)
