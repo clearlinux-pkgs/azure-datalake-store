@@ -4,7 +4,7 @@
 #
 Name     : azure-datalake-store
 Version  : 0.0.51
-Release  : 10
+Release  : 11
 URL      : https://files.pythonhosted.org/packages/2e/e8/0483d88c6dba818b5a81c410c7bf1bce5817077961f3d408731aa2481fa6/azure-datalake-store-0.0.51.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2e/e8/0483d88c6dba818b5a81c410c7bf1bce5817077961f3d408731aa2481fa6/azure-datalake-store-0.0.51.tar.gz
 Summary  : Azure Data Lake Store Filesystem Client Library for Python
